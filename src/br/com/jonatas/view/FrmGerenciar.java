@@ -14,14 +14,14 @@ import java.util.logging.Logger;
  * @author jonatas.meireles
  */
 public class FrmGerenciar extends javax.swing.JFrame {
-    private final ControllerMenu controller;
+    //private final ControllerMenu controller;
 
     /**
      * Creates new form Tela02
      */
     public FrmGerenciar() {
         initComponents();
-        controller =  new ControllerMenu(this);
+        //controller =  new ControllerMenu(this);
     }
 
     /**
