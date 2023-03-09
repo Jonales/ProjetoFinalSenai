@@ -19,15 +19,15 @@ public class HelperUsuario {
     }
     
     public ModeloUsuario obterModelo(){
-        String login = view.getjTextLogin().getText();
-        String senha = view.getjPasswordSenha().getText();
-        ModeloUsuario modelo = new ModeloUsuario(0, login, senha);
+        String nome_usuario = view.getjTextLogin().getText();
+        String senha_usuario = view.getjPasswordSenha().getText();
+        ModeloUsuario modelo = new ModeloUsuario(0, nome_usuario, senha_usuario);
         return modelo; 
     }
     
     public void setarModelo(ModeloUsuario modelo){
-        String login = modelo.getLogin();
-        String senha = modelo.getSenha();
+        String login = modelo.getNome_usuario();
+        String senha = modelo.getSenha_usuario();
         
         view.getjTextLogin().setText(login);
         view.getjPasswordSenha().setText(senha); 

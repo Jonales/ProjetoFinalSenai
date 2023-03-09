@@ -23,11 +23,11 @@ public class DaoUsuario {
         conn = new ConnectionFactory().getConnection();
         
         try {
-            String sql = "SELECT * FROM seguradora.e4usuarios where LOGIN = ? and SENHA = ? ";
+            String sql = "SELECT * FROM inventarium.in_usuaruio where nome_usuario = ? and senha_usuario = ? ";
             
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, modeloLogin.getLogin());
-            stmt.setString(2, modeloLogin.getSenha());
+            stmt.setString(1, modeloLogin.getNome_usuario());
+            stmt.setString(2, modeloLogin.getSenha_usuario());
             
             ResultSet rs = stmt.executeQuery();
             return rs;
@@ -47,13 +47,12 @@ public class DaoUsuario {
         conn = new ConnectionFactory().getConnection();
        
         try {
-            String sql = "insert into seguradora.e4usuarios (cargo, nome, login, senha) VALUES(?,?,?,?)";
+            String sql = "insert into inventarium.in_usuaruio (nome_usuario, senha_usuario, descricao_usuario) VALUES(?,?,?)";
              
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, usuario.getCargo());
-            stmt.setString(2, usuario.getNome());
-            stmt.setString(3, usuario.getLogin());
-            stmt.setString(4, usuario.getSenha());
+            stmt.setString(1, usuario.getNome_usuario());
+            stmt.setString(2, usuario.getSenha_usuario());
+            stmt.setString(3, usuario.getDescricao_usuario());
             stmt.execute();
             stmt.close();
 
@@ -104,7 +103,7 @@ public class DaoUsuario {
      * @return verdadeiro caso sejam iguais e falso caso nao forem iguais
      */
     private boolean nomeESenhaSaoIguais(ModeloUsuario usuario, ModeloUsuario usuarioAPesquisar) {
-        return usuario.getLogin().equals(usuarioAPesquisar.getLogin()) && usuario.getSenha().equals(usuarioAPesquisar.getSenha());
+        return usuario.getNome_usuario().equals(usuarioAPesquisar.getNome_usuario()) && usuario.getSenha_usuario().equals(usuarioAPesquisar.getSenha_usuario());
     }
 
     /**

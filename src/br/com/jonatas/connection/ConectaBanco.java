@@ -9,7 +9,7 @@ public class ConectaBanco {
     public Statement stm; // responsavel por preparar e realizar pesquisas no banco de dados
     public ResultSet rs; // responsavel por armazenar o resultado de uma pesquisa passada para statement
     private String driver = "org.mysql.driver";
-    private String caminho = "jdbc:mysql://localhost/seguradora"; // responsavel por setar o local do banco
+    private String caminho = "jdbc:mysql://localhost/inventarium"; // responsavel por setar o local do banco
     private String usuario = "root";
     private String senha = "1234";
     public Connection conn; // responsavel por realizar a conexao com o banco de dados

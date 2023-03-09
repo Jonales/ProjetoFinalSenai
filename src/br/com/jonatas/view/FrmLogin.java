@@ -142,6 +142,8 @@ public class FrmLogin extends javax.swing.JFrame {
     private void jBAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAcessarActionPerformed
         try {
             // TODO add your handling code here:
+          //System.out.println("Login Digitado: " + getjTextLogin().getText());
+          //System.out.println("Login Digitado: " + getjTextLogin().getText());
             this.controller.entrarNoSistema(); // Chama o metodo para comparar o usuario digitado
         } catch (SQLException ex) {
             Logger.getLogger(FrmLogin.class.getName()).log(Level.SEVERE, null, ex);
@@ -219,6 +221,7 @@ public class FrmLogin extends javax.swing.JFrame {
 
     public void exibeMensagem(String mensagem) {
         JOptionPane.showMessageDialog(null, mensagem);
+        
     }
     
     public JPasswordField getjPasswordSenha() {

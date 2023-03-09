@@ -11,24 +11,28 @@ package br.com.jonatas.modelo;
 public class ModeloUsuario {
     
     private int id ;
-    private String cargo;
-    private String nome;
-    private String login;
-    private String senha;
+    private String nome_usuario;
+    private String senha_usuario;
+    private String descricao_usuario;
 
-    public ModeloUsuario(int id, String login, String senha) {
+    public ModeloUsuario(int id, String nome_usuario, String senha_usuario, String descricao_usuario) {
         this.id = id;
-        this.login = login;
-        this.senha = senha;
+        this.nome_usuario = nome_usuario;
+        this.senha_usuario = senha_usuario;
+        this.descricao_usuario = descricao_usuario;
     }
 
-    public ModeloUsuario(int id, String cargo, String nome, String login, String senha) {
+    public ModeloUsuario(int id, String nome_usuario, String senha_usuario) {
         this.id = id;
-        this.cargo = cargo;
-        this.nome = nome;
-        this.login = login;
-        this.senha = senha;
+        this.nome_usuario = nome_usuario;
+        this.senha_usuario = senha_usuario;
     }
+    
+    public ModeloUsuario(String nome_usuario, String senha_usuario) {
+        this.nome_usuario = nome_usuario;
+        this.senha_usuario = senha_usuario;
+    }
+    
 
     public int getId() {
         return id;
@@ -38,36 +42,31 @@ public class ModeloUsuario {
         this.id = id;
     }
 
-    public String getCargo() {
-        return cargo;
+    public String getNome_usuario() {
+        return nome_usuario;
     }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public void setNome_usuario(String nome_usuario) {
+        this.nome_usuario = nome_usuario;
     }
 
-    public String getNome() {
-        return nome;
+    public String getSenha_usuario() {
+        return senha_usuario;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setSenha_usuario(String senha_usuario) {
+        this.senha_usuario = senha_usuario;
     }
 
-    public String getLogin() {
-        return login;
+    public String getDescricao_usuario() {
+        return descricao_usuario;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setDescricao_usuario(String descricao_usuario) {
+        this.descricao_usuario = descricao_usuario;
     }
 
-    public String getSenha() {
-        return senha;
-    }
+    
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
     
 }
